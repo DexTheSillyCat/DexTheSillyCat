@@ -22,12 +22,18 @@ jobs:
         LATITUDE: ${{ secrets.LATITUDE }}
         LONGITUDE: ${{ secrets.LONGITUDE }}
       run: |
+        echo "Fetching weather information for latitude=${{ secrets.LATITUDE }} and longitude=${{ secrets.LONGITUDE }}"
         weather_response=$(curl -s "https://api.open-meteo.com/v1/forecast?latitude=${LATITUDE}&longitude=${LONGITUDE}&current_weather=true&timezone=auto")
+        echo "Weather response: $weather_response"
         temp=$(echo $weather_response | jq '.current_weather.temperature')
+        echo "Temperature: $temp"
         
+        echo "Fetching sunrise and sunset information"
         sunrise_sunset_response=$(curl -s "https://api.sunrise-sunset.org/json?lat=${LATITUDE}&lng=${LONGITUDE}&formatted=0")
+        echo "Sunrise/Sunset response: $sunrise_sunset_response"
         sunrise=$(echo $sunrise_sunset_response | jq -r '.results.sunrise')
         sunset=$(echo $sunrise_sunset_response | jq -r '.results.sunset')
+        echo "Sunrise: $sunrise, Sunset: $sunset"
         
         echo "TEMP=${temp}" >> $GITHUB_ENV
         echo "SUNRISE=${sunrise}" >> $GITHUB_ENV
@@ -35,12 +41,27 @@ jobs:
 
     - name: Update README
       run: |
+        echo "Updating README.md"
         sed -i "s/{{TEMP}}/**${{ env.TEMP }}**/" README.md
         sed -i "s/{{SUNRISE}}/**${{ env.SUNRISE }}**/" README.md
         sed -i "s/{{SUNSET}}/**${{ env.SUNSET }}**/" README.md
+        cat README.md
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git pull --rebase
         git add README.md
         git commit -m "Update README with weather info" || echo "No changes to commit"
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+
+    - name: Reintroduce Placeholders
+      run: |
+        echo "Reintroducing placeholders in README.md"
+        sed -i "s/**${{ env.TEMP }}**/{{TEMP}}/" README.md
+        sed -i "s/**${{ env.SUNRISE }}**/{{SUNRISE}}/" README.md
+        sed -i "s/**${{ env.SUNSET }}**/{{SUNSET}}/" README.md
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git pull --rebase
+        git add README.md
+        git commit -m "Reintroduce placeholders in README" || echo "No changes to commit"
         git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
