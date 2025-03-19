@@ -20,13 +20,13 @@
 helloo! im a 13 year old student, and i love programming (as a hobby), and i develop games!!  
 here are a few programming languages i like or learned:  
 
-- <img src="https://cdn.simpleicons.org/html5/E34F26" height="15"> HTML
-- <img src="https://cdn.simpleicons.org/css3/1572B6" height="15"> CSS
-- <img src="https://cdn.simpleicons.org/javascript/F7DF1E" height="15"> JavaScript
-   - <img src="https://cdn.simpleicons.org/typescript/3178C6" height="15"> TypeScript
-- <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Windows_logo_-_2021.svg" height="15"> .bat/cmd files
-- <img src="https://cdn.simpleicons.org/ruby/CC342D" height="15"> Ruby
-- <img src="https://cdn.simpleicons.org/python/3776AB" height="15"> Python
+- <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" height="20" />  
+- <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" height="20" />  
+- <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" height="20" />  
+- <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" height="20" />  
+- <img alt="Batch File" src="https://img.shields.io/badge/Batch%20File-4D4D4D?style=flat-square&logo=windows&logoColor=white" height="20" />  
+- <img alt="Ruby" src="https://img.shields.io/badge/Ruby-CC342D?style=flat-square&logo=ruby&logoColor=white" height="20" />  
+- <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" height="20" />   
 
 <div align="center">
   <h3>projects im working on</h3>
