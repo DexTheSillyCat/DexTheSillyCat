@@ -30,7 +30,7 @@ here are a few programming languages i like or learned:
 
 <div align="center">
   <h3>projects im working on</h3>
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=DexTheSillyCat&repo=dexs-multitools&theme=transparent" alt="wip project1"/>
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=DexTheSillyCat&repo=DTSCM&theme=transparent" alt="wip project1"/>
 </div>
 
 
