@@ -5,6 +5,9 @@ on:
     - cron: '*/1 * * * *' # Runs every minute
   workflow_dispatch:
 
+permissions:
+  contents: write  # Ensure the workflow has write permissions
+
 jobs:
   update-readme:
     runs-on: ubuntu-latest
@@ -16,16 +19,14 @@ jobs:
     - name: Get Weather Info
       id: weather
       run: |
-        latitude="45.494141"
-        longitude="-122.870117"
+        latitude="45.4833"
+        longitude="-122.8813"
+        weather_response=$(curl -s "https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&timezone=auto")
+        temp=$(echo $weather_response | jq '.current_weather.temperature')
         
-        response=$(curl -s "https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&timezone=auto")
-        temp=$(echo $response | jq '.current_weather.temperature')
-        # Note: Open-Meteo API does not provide daily sunrise and sunset times in the current weather API.
-        # You might need to use another API or service to get sunrise and sunset times.
-        # For demonstration, we'll use fixed times.
-        sunrise="06:00"
-        sunset="18:00"
+        sunrise_sunset_response=$(curl -s "https://api.sunrise-sunset.org/json?lat=${latitude}&lng=${longitude}&formatted=0")
+        sunrise=$(echo $sunrise_sunset_response | jq -r '.results.sunrise')
+        sunset=$(echo $sunrise_sunset_response | jq -r '.results.sunset')
         
         echo "TEMP=${temp}" >> $GITHUB_ENV
         echo "SUNRISE=${sunrise}" >> $GITHUB_ENV
@@ -33,11 +34,12 @@ jobs:
 
     - name: Update README
       run: |
-        sed -i "s/{{TEMP}}/${{ env.TEMP }}/" README.md
-        sed -i "s/{{SUNRISE}}/${{ env.SUNRISE }}/" README.md
-        sed -i "s/{{SUNSET}}/${{ env.SUNSET }}/" README.md
+        sed -i "s/{{TEMP}}/**${{ env.TEMP }}**/" README.md
+        sed -i "s/{{SUNRISE}}/**${{ env.SUNRISE }}**/" README.md
+        sed -i "s/{{SUNSET}}/**${{ env.SUNSET }}**/" README.md
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git pull --rebase
         git add README.md
         git commit -m "Update README with weather info" || echo "No changes to commit"
-        git push
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
