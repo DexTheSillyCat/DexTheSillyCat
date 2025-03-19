@@ -56,9 +56,9 @@ jobs:
     - name: Reintroduce Placeholders
       run: |
         echo "Reintroducing placeholders in README.md"
-        sed -i "s/**${{ env.TEMP }}**/{{TEMP}}/" README.md
-        sed -i "s/**${{ env.SUNRISE }}**/{{SUNRISE}}/" README.md
-        sed -i "s/**${{ env.SUNSET }}**/{{SUNSET}}/" README.md
+        sed -i "s/\*\*${{ env.TEMP }}\*\*/{{TEMP}}/" README.md
+        sed -i "s/\*\*${{ env.SUNRISE }}\*\*/{{SUNRISE}}/" README.md
+        sed -i "s/\*\*${{ env.SUNSET }}\*\*/{{SUNSET}}/" README.md
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git pull --rebase
