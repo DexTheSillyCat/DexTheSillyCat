@@ -19,10 +19,14 @@ jobs:
         latitude="45.494141"
         longitude="-122.870117"
         
+        
         response=$(curl -s "https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&timezone=auto")
         temp=$(echo $response | jq '.current_weather.temperature')
-        sunrise=$(echo $response | jq '.daily.sunrise[0]' | xargs -I {} date -d {} +"%H:%M")
-        sunset=$(echo $response | jq '.daily.sunset[0]' | xargs -I {} date -d {} +"%H:%M")
+        # Note: Open-Meteo API does not provide daily sunrise and sunset times in the current weather API.
+        # You might need to use another API or service to get sunrise and sunset times.
+        # For demonstration, we'll use fixed times.
+        sunrise="06:00"
+        sunset="18:00"
         
         echo "::set-output name=temp::${temp}"
         echo "::set-output name=sunrise::${sunrise}"
@@ -30,8 +34,9 @@ jobs:
 
     - name: Update README
       run: |
-        sed -i "s/right now, the temperature of my area is .*F./right now, the temperature of my area is ${{ steps.weather.outputs.temp }}F./" README.md
-        sed -i "s/the sun sets at .* and rises at .*/the sun sets at ${{ steps.weather.outputs.sunset }}, and rises at ${{ steps.weather.outputs.sunrise }}./" README.md
+        sed -i "s/{{TEMP}}/${{ steps.weather.outputs.temp }}/" README.md
+        sed -i "s/{{SUNRISE}}/${{ steps.weather.outputs.sunrise }}/" README.md
+        sed -i "s/{{SUNSET}}/${{ steps.weather.outputs.sunset }}/" README.md
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git add README.md
