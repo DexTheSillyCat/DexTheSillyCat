@@ -33,11 +33,6 @@ here are a few programming languages i like or learned:
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=DexTheSillyCat&repo=DTSCM&theme=transparent" alt="wip project1"/>
 </div>
 
-## Weather Information
-Right now, the temperature of my area is {{TEMP}}F.
-The sun sets at {{SUNSET}}, and rises at {{SUNRISE}}.
-I've used Codespace for {{CODESPACE_HOURS}} hours.
-
 <div align="center">
   <h3>projects im proud of</h3>
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=DexTheSillyCat&repo=card-tilting-template&theme=transparent" alt="project1"/>
