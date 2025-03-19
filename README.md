@@ -33,10 +33,9 @@ here are a few programming languages i like or learned:
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=DexTheSillyCat&repo=DTSCM&theme=transparent" alt="wip project1"/>
 </div>
 
-### Weather Information
-
-Right now, the temperature of my area is 12.7F.<br>
-The sun sets at 18:00, and rises at 06:00.<br>
+## Weather Information
+Right now, the temperature of my area is {{TEMP}}F.
+The sun sets at {{SUNSET}}, and rises at {{SUNRISE}}.
 I've used Codespace for {{CODESPACE_HOURS}} hours.
 
 <div align="center">
