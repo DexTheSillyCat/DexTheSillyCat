@@ -33,7 +33,7 @@ here are a few programming languages i like or learned:
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=DexTheSillyCat&repo=DTSCM&theme=transparent" alt="wip project1"/>
 </div>
 
-# Weather Information
+### weather info
 
 right now, the temperature of my area is {{TEMP}}F<br>
 the sun sets at {{SUNSET}}, and rises at {{SUNRISE}}<br>
