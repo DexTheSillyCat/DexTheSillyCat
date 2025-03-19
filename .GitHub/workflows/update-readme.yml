@@ -1,0 +1,39 @@
+name: Update README with Weather Info
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Runs every hour
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Get Weather Info
+      id: weather
+      run: |
+        latitude="45.494141"
+        longitude="-122.870117"
+        
+        response=$(curl -s "https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&timezone=auto")
+        temp=$(echo $response | jq '.current_weather.temperature')
+        sunrise=$(echo $response | jq '.daily.sunrise[0]' | xargs -I {} date -d {} +"%H:%M")
+        sunset=$(echo $response | jq '.daily.sunset[0]' | xargs -I {} date -d {} +"%H:%M")
+        
+        echo "::set-output name=temp::${temp}"
+        echo "::set-output name=sunrise::${sunrise}"
+        echo "::set-output name=sunset::${sunset}"
+
+    - name: Update README
+      run: |
+        sed -i "s/right now, the temperature of my area is .*F./right now, the temperature of my area is ${{ steps.weather.outputs.temp }}F./" README.md
+        sed -i "s/the sun sets at .* and rises at .*/the sun sets at ${{ steps.weather.outputs.sunset }}, and rises at ${{ steps.weather.outputs.sunrise }}./" README.md
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add README.md
+        git commit -m "Update README with weather info"
+        git push
