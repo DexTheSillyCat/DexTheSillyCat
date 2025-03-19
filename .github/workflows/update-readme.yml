@@ -19,7 +19,6 @@ jobs:
         latitude="45.494141"
         longitude="-122.870117"
         
-        
         response=$(curl -s "https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&timezone=auto")
         temp=$(echo $response | jq '.current_weather.temperature')
         # Note: Open-Meteo API does not provide daily sunrise and sunset times in the current weather API.
@@ -28,17 +27,17 @@ jobs:
         sunrise="06:00"
         sunset="18:00"
         
-        echo "::set-output name=temp::${temp}"
-        echo "::set-output name=sunrise::${sunrise}"
-        echo "::set-output name=sunset::${sunset}"
+        echo "TEMP=${temp}" >> $GITHUB_ENV
+        echo "SUNRISE=${sunrise}" >> $GITHUB_ENV
+        echo "SUNSET=${sunset}" >> $GITHUB_ENV
 
     - name: Update README
       run: |
-        sed -i "s/{{TEMP}}/${{ steps.weather.outputs.temp }}/" README.md
-        sed -i "s/{{SUNRISE}}/${{ steps.weather.outputs.sunrise }}/" README.md
-        sed -i "s/{{SUNSET}}/${{ steps.weather.outputs.sunset }}/" README.md
+        sed -i "s/{{TEMP}}/${{ env.TEMP }}/" README.md
+        sed -i "s/{{SUNRISE}}/${{ env.SUNRISE }}/" README.md
+        sed -i "s/{{SUNSET}}/${{ env.SUNSET }}/" README.md
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git add README.md
-        git commit -m "Update README with weather info"
+        git commit -m "Update README with weather info" || echo "No changes to commit"
         git push
