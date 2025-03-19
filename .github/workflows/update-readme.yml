@@ -18,13 +18,14 @@ jobs:
 
     - name: Get Weather Info
       id: weather
+      env:
+        LATITUDE: ${{ secrets.LATITUDE }}
+        LONGITUDE: ${{ secrets.LONGITUDE }}
       run: |
-        latitude="45.4833"
-        longitude="-122.8813"
-        weather_response=$(curl -s "https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&timezone=auto")
+        weather_response=$(curl -s "https://api.open-meteo.com/v1/forecast?latitude=${LATITUDE}&longitude=${LONGITUDE}&current_weather=true&timezone=auto")
         temp=$(echo $weather_response | jq '.current_weather.temperature')
         
-        sunrise_sunset_response=$(curl -s "https://api.sunrise-sunset.org/json?lat=${latitude}&lng=${longitude}&formatted=0")
+        sunrise_sunset_response=$(curl -s "https://api.sunrise-sunset.org/json?lat=${LATITUDE}&lng=${LONGITUDE}&formatted=0")
         sunrise=$(echo $sunrise_sunset_response | jq -r '.results.sunrise')
         sunset=$(echo $sunrise_sunset_response | jq -r '.results.sunset')
         
