@@ -35,8 +35,8 @@ here are a few programming languages i like or learned:
 
 ### Weather Information
 
-Right now, the temperature of my area is {{TEMP}}F.<br>
-The sun sets at {{SUNSET}}, and rises at {{SUNRISE}}.<br>
+Right now, the temperature of my area is 12.7F.<br>
+The sun sets at 18:00, and rises at 06:00.<br>
 I've used Codespace for {{CODESPACE_HOURS}} hours.
 
 <div align="center">
