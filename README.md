@@ -28,29 +28,13 @@ here are a few programming languages i like or learned:
 - <img alt="Ruby" src="https://img.shields.io/badge/Ruby-CC342D?style=flat-square&logo=ruby&logoColor=white" height="20" />  
 - <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" height="20" />   
 
-> [!NOTE]
-> Useful information that users should know, even when skimming content.
-
-> [!TIP]
-> Helpful advice for doing things better or more easily.
-
-> [!IMPORTANT]
-> Key information users need to know to achieve their goal.
-
-> [!WARNING]
-> Urgent info that needs immediate user attention to avoid problems.
-
-> [!CAUTION]
-> Advises about risks or negative outcomes of certain actions.
-
-
 
 <div align="center">
   <h3>github status</h3>
   <img src="https://github-readme-stats.vercel.app/api?username=DexTheSillyCat&show_icons=true&theme=radical" alt="DexTheSillyCat's GitHub stats"/>
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DexTheSillyCat&layout=compact&langs_count=16&theme=radical" alt="Top Langs"/>
   <br>
-  <img src="https://github-profile-trophy.vercel.app/?username=DexTheSillyCat&theme=onedark" alt="Achievements"/>
+  <img src="https://github-profile-trophy.vercel.app/?username=DexTheSillyCat&theme=radical" alt="Achievements"/>
   <br>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=DexTheSillyCat&theme=react-dark" alt="Contributions"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=DexTheSillyCat&theme=react" alt="Contributions"/>
 </div>
