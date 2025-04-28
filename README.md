@@ -38,5 +38,4 @@ here are a few programming languages i like or learned:
   <br>
   <img src="https://github-profile-trophy.vercel.app/?username=DexTheSillyCat&theme=radical" alt="Achievements"/>
   <br>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=DexTheSillyCat&theme=react" alt="Contributions"/>
 </div>
