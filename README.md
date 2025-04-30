@@ -17,6 +17,8 @@
   </div>
 </body>
 
+### bio!!
+
 helloo! im a 13 year old student, and i love programming (as a hobby), and i develop games!!  
 here are a few programming languages i like or learned:  
 
@@ -26,7 +28,18 @@ here are a few programming languages i like or learned:
 - <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" height="20" />  
 - <img alt="Batch File" src="https://img.shields.io/badge/Batch%20File-4D4D4D?style=flat-square&logo=windows&logoColor=white" height="20" />  
 - <img alt="Ruby" src="https://img.shields.io/badge/Ruby-CC342D?style=flat-square&logo=ruby&logoColor=white" height="20" />  
-- <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" height="20" />   
+- <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" height="20" />
+
+### toolbox
+- <img alt="VS Code" src="https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=flat-square&logo=visual_studio_code&logoColor=white" height="20" />
+- <img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" height="20" />
+- <img alt="Roblox Studio" src="https://img.shields.io/badge/Roblox_Studio-222222?style=flat-square&logo=roblox&logoColor=white" height="20" />
+- <img alt="Scratch" src="https://img.shields.io/badge/Scratch-FF8C1A?style=flat-square&logo=scratch&logoColor=white" height="20" />
+
+### random thoughts..
+- *maybe i should learn animating..*
+- *..should i make a animation on my oc?*
+
 
 
 <div align="center">
