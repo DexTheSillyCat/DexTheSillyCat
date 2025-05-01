@@ -40,6 +40,7 @@ here are a few programming languages i like or learned:
 ### random thoughts..
 - *maybe i should learn animating..*
 - *..should i make a animation on my oc?*
+- *..would be funny if i created a programming language*
 
 
 
