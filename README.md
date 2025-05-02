@@ -20,22 +20,13 @@
 ### bio!!
 
 helloo! im a 13 year old student, and i love programming (as a hobby), and i develop games!!  
-here are a few programming languages i like or learned:  
 
-<img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-<img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-<img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-<img alt="Batch File" src="https://img.shields.io/badge/Batch%20File-4D4D4D?style=for-the-badge&logo=windows&logoColor=white" />
-<img alt="Ruby" src="https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white" />
-<img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-<img alt="Lua" src="https://img.shields.io/badge/Lua-blue?style=for-the-badge&logo=lua&logoColor=white" />
+### programming languages learned
+
+<img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />&nbsp;<img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />&nbsp;<img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />&nbsp;<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />&nbsp;<img alt="Batch File" src="https://img.shields.io/badge/Batch%20File-4D4D4D?style=for-the-badge&logo=windows&logoColor=white" />&nbsp;<img alt="Ruby" src="https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white" />&nbsp;<img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />&nbsp;<img alt="Lua" src="https://img.shields.io/badge/Lua-blue?style=for-the-badge&logo=lua&logoColor=white" />
 
 ### toolbox
-<img alt="VS Code" src="https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=for-the-badge&logo=visual_studio_code&logoColor=white" />
-<img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-<img alt="Roblox Studio" src="https://img.shields.io/badge/Roblox_Studio-222222?style=for-the-badge&logo=roblox&logoColor=white" />
-<img alt="Scratch" src="https://img.shields.io/badge/Scratch-FF8C1A?style=for-the-badge&logo=scratch&logoColor=white" />
+<img alt="VS Code" src="https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=for-the-badge&logo=visualstudio&logoColor=white" />&nbsp;<img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />&nbsp;<img alt="Roblox Studio" src="https://img.shields.io/badge/Roblox_Studio-222222?style=for-the-badge&logo=roblox&logoColor=white" />&nbsp;<img alt="Scratch" src="https://img.shields.io/badge/Scratch-FF8C1A?style=for-the-badge&logo=scratch&logoColor=white" />
 
 ### random thoughts..
 - *maybe i should learn animating..*
