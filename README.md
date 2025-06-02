@@ -28,11 +28,6 @@ helloo! im a 13 year old student, and i love programming (as a hobby), and i dev
 ### toolbox
 <img alt="VS Code" src="https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=for-the-badge&logo=visualstudio&logoColor=white" />&nbsp;<img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />&nbsp;<img alt="Roblox Studio" src="https://img.shields.io/badge/Roblox_Studio-222222?style=for-the-badge&logo=roblox&logoColor=white" />&nbsp;<img alt="Scratch" src="https://img.shields.io/badge/Scratch-FF8C1A?style=for-the-badge&logo=scratch&logoColor=white" />
 
-### random thoughts..
-- *maybe i should learn animating..*
-- *..should i make a animation on my oc?*
-- *..would be funny if i created a programming language*
-
 
 
 <div align="center">
